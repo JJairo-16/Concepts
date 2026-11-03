@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_menu"
+    tools:context=".MenuI3Activity">
+
+    <!-- Decorative background blobs -->
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        android:tint="@color/blob_yellow"
+        android:translationX="-60dp"
+        android:translationY="-40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        android:tint="@color/blob_pink"
+        android:translationX="60dp"
+        android:translationY="-40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        android:tint="@color/blob_blue"
+        android:translationX="-35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        android:tint="@color/blob_peach"
+        android:translationX="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        android:tint="@color/blob_green"
+        android:translationX="-60dp"
+        android:translationY="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        android:tint="@color/blob_lavender"
+        android:translationX="60dp"
+        android:translationY="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.14" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <TextView
+        android:id="@+id/tv_menu_title"
+        style="@style/MenuLevelTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_i3_title"
+        android:textColor="@color/color_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline_title" />
+
+    <LinearLayout
+        android:id="@+id/options_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52"
+        app:layout_constraintWidth_percent="0.76">
+
+        <TextView
+            android:id="@+id/btn_activity_1"
+            style="@style/MenuActivityButton"
+            android:backgroundTint="@color/color_red"
+            android:text="@string/menu_i3_activity_1"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_return"
+        style="@style/MenuReturnButton"
+        android:text="@string/menu_return"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline_return"
+        app:layout_constraintWidth_percent="0.28" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Concepts</string>
+
+    <!-- Menu I3 -->
+    <string name="menu_i3_title">I3</string>
+    <string name="menu_i3_activity_1">WHAT IS YOUR FAVORITE COLOR?</string>
+
+    <!-- Menu I4 -->
+    <string name="menu_i4_title">I4</string>
+    <string name="menu_i4_activity_1">HEAR AND SELECT</string>
+    <string name="menu_i4_activity_2">COMPLETE THE RAINBOW</string>
+
+    <!-- Menu I5 -->
+    <string name="menu_i5_title">I5</string>
+    <string name="menu_i5_activity_1">FIND THE COLOUR</string>
+    <string name="menu_i5_activity_2">COLOURS AND SHAPES</string>
+
+    <!-- Common -->
+    <string name="menu_return">RETURN</string>
+    <string name="menu_start">START</string>
 </resources>
