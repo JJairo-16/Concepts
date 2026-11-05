@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Larger canvases (Chromebook 1920x1080 at mdpi, 1600x900, etc.).
+     Everything is scaled 1.5x so the design keeps the same proportions
+     as on the 1280x800 reference tablet. -->
+<resources>
+
+    <!-- Decorative background blobs -->
+    <dimen name="blob_large_width">270dp</dimen>
+    <dimen name="blob_large_height">180dp</dimen>
+    <dimen name="blob_small_width">120dp</dimen>
+    <dimen name="blob_small_height">90dp</dimen>
+    <dimen name="blob_offset_x">90dp</dimen>
+    <dimen name="blob_offset_x_neg">-90dp</dimen>
+    <dimen name="blob_offset_y_neg">-60dp</dimen>
+    <dimen name="blob_bottom_offset">68dp</dimen>
+    <dimen name="blob_small_offset_x">53dp</dimen>
+    <dimen name="blob_small_offset_x_neg">-53dp</dimen>
+
+    <!-- Initial screen -->
+    <dimen name="logo_margin_top">24dp</dimen>
+    <dimen name="logo_max_height">390dp</dimen>
+    <dimen name="logo_min_height">135dp</dimen>
+    <dimen name="start_button_max_height">96dp</dimen>
+    <dimen name="start_button_min_height">66dp</dimen>
+    <dimen name="start_arrow_size">45dp</dimen>
+
+    <!-- Menus and brush buttons -->
+    <dimen name="menu_button_margin_top">18dp</dimen>
+    <dimen name="menu_button_max_height">126dp</dimen>
+    <dimen name="menu_button_min_height">66dp</dimen>
+    <dimen name="brush_button_height">126dp</dimen>
+    <dimen name="activity_button_height">108dp</dimen>
+    <dimen name="activity_button_spacing">48dp</dimen>
+    <dimen name="return_button_height">84dp</dimen>
+    <dimen name="menu_button_elevation">9dp</dimen>
+    <dimen name="menu_button_padding_h">48dp</dimen>
+    <dimen name="menu_activity_padding_h">30dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="menu_title_text_size">84sp</dimen>
+    <dimen name="brush_text_size">45sp</dimen>
+    <dimen name="return_text_size">30sp</dimen>
+    <dimen name="autosize_min_text_size">24sp</dimen>
+    <dimen name="autosize_max_text_size">45sp</dimen>
+    <dimen name="autosize_step">3sp</dimen>
+
+    <!-- Game I3: What is your favourite colour? -->
+    <dimen name="game_info_text_size">26sp</dimen>
+    <dimen name="game_title_text_size">60sp</dimen>
+    <dimen name="game_instruction_text_size">30sp</dimen>
+    <dimen name="game_icon_width">126dp</dimen>
+    <dimen name="game_icon_height">72dp</dimen>
+    <dimen name="game_icon_margin_end">24dp</dimen>
+    <dimen name="game_title_margin_end">36dp</dimen>
+    <dimen name="game_colors_row_height">150dp</dimen>
+    <dimen name="game_return_margin_end">39dp</dimen>
+    <dimen name="game_return_margin_bottom">69dp</dimen>
+
+</resources>

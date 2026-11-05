@@ -4,45 +4,45 @@
     <style name="MenuLevelTitle">
         <item name="android:fontFamily">sans-serif-black</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">56sp</item>
+        <item name="android:textSize">@dimen/menu_title_text_size</item>
         <item name="android:letterSpacing">0.04</item>
         <item name="android:includeFontPadding">false</item>
     </style>
 
     <style name="MenuBrushButton">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">84dp</item>
+        <item name="android:layout_height">@dimen/brush_button_height</item>
         <item name="android:background">@drawable/bg_brush</item>
         <item name="android:gravity">center</item>
         <item name="android:fontFamily">sans-serif-black</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">@dimen/brush_text_size</item>
         <item name="android:letterSpacing">0.02</item>
-        <item name="android:paddingStart">32dp</item>
-        <item name="android:paddingEnd">32dp</item>
+        <item name="android:paddingStart">@dimen/menu_button_padding_h</item>
+        <item name="android:paddingEnd">@dimen/menu_button_padding_h</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
-        <item name="android:elevation">6dp</item>
+        <item name="android:elevation">@dimen/menu_button_elevation</item>
         <item name="android:stateListAnimator">@null</item>
     </style>
 
     <style name="MenuReturnButton" parent="MenuBrushButton">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_height">@dimen/return_button_height</item>
         <item name="android:background">@drawable/bg_brush_exit</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/return_text_size</item>
         <item name="android:textColor">@color/menu_text_dark</item>
         <item name="android:backgroundTint">@color/color_green</item>
     </style>
 
     <style name="MenuActivityButton" parent="MenuBrushButton">
         <item name="autoSizeTextType">uniform</item>
-        <item name="autoSizeMinTextSize">16sp</item>
-        <item name="autoSizeMaxTextSize">30sp</item>
-        <item name="autoSizeStepGranularity">2sp</item>
+        <item name="autoSizeMinTextSize">@dimen/autosize_min_text_size</item>
+        <item name="autoSizeMaxTextSize">@dimen/autosize_max_text_size</item>
+        <item name="autoSizeStepGranularity">@dimen/autosize_step</item>
         <item name="android:maxLines">1</item>
-        <item name="android:paddingStart">20dp</item>
-        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingStart">@dimen/menu_activity_padding_h</item>
+        <item name="android:paddingEnd">@dimen/menu_activity_padding_h</item>
     </style>
 
 </resources>
