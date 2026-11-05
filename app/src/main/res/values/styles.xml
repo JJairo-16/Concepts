@@ -29,7 +29,7 @@
     <style name="MenuReturnButton" parent="MenuBrushButton">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">56dp</item>
-        <item name="android:background">@drawable/bg_brush_return</item>
+        <item name="android:background">@drawable/bg_brush_exit</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/menu_text_dark</item>
         <item name="android:backgroundTint">@color/color_green</item>
