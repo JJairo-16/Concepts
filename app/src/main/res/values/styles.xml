@@ -35,6 +35,15 @@
         <item name="android:backgroundTint">@color/color_green</item>
     </style>
 
+    <style name="MenuLevelBrushButton" parent="MenuBrushButton">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">@dimen/level_button_min_text_size</item>
+        <item name="autoSizeMaxTextSize">@dimen/level_button_max_text_size</item>
+        <item name="autoSizeStepGranularity">@dimen/autosize_step</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
     <style name="MenuActivityButton" parent="MenuBrushButton">
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMinTextSize">@dimen/autosize_min_text_size</item>
