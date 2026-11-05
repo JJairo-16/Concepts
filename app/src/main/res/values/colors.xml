@@ -2,4 +2,25 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Palette (Guia d'estils) -->
+    <color name="color_red">#EE1B24</color>
+    <color name="color_orange">#EE9A1B</color>
+    <color name="color_yellow">#FEF102</color>
+    <color name="color_green">#8FC646</color>
+    <color name="color_blue">#466AC6</color>
+    <color name="color_purple">#8F288D</color>
+
+    <!-- Menu -->
+    <color name="menu_background">#FBFAF7</color>
+    <color name="menu_grid">#14000000</color>
+    <color name="menu_text_dark">#1B1B2F</color>
+
+    <!-- Decorative background blobs -->
+    <color name="blob_yellow">#FFF6B8</color>
+    <color name="blob_pink">#FBD3D3</color>
+    <color name="blob_blue">#E1E5F8</color>
+    <color name="blob_peach">#FBE7CA</color>
+    <color name="blob_green">#E4F2D4</color>
+    <color name="blob_lavender">#EEDCEE</color>
 </resources>

@@ -5,15 +5,181 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_menu"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <!-- Decorative background blobs -->
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        app:tint="@color/blob_yellow"
+        android:translationX="-60dp"
+        android:translationY="-40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        app:tint="@color/blob_pink"
+        android:translationX="60dp"
+        android:translationY="-40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        app:tint="@color/blob_blue"
+        android:translationX="-35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        app:tint="@color/blob_peach"
+        android:translationX="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        app:tint="@color/blob_green"
+        android:translationX="-60dp"
+        android:translationY="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        app:tint="@color/blob_lavender"
+        android:translationX="60dp"
+        android:translationY="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.79" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_concepts"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="260dp"
+        app:layout_constraintHeight_min="90dp"
+        app:layout_constraintHeight_percent="0.32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_i3"
+        style="@style/MenuBrushButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/color_red"
+        android:text="@string/menu_i3_title"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="84dp"
+        app:layout_constraintHeight_min="44dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo"
+        app:layout_constraintWidth_percent="0.64" />
+
+    <TextView
+        android:id="@+id/btn_i4"
+        style="@style/MenuBrushButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/color_orange"
+        android:text="@string/menu_i4_title"
+        android:textColor="@color/menu_text_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="84dp"
+        app:layout_constraintHeight_min="44dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_i3"
+        app:layout_constraintWidth_percent="0.64" />
+
+    <TextView
+        android:id="@+id/btn_i5"
+        style="@style/MenuBrushButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/color_purple"
+        android:text="@string/menu_i5_title"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="84dp"
+        app:layout_constraintHeight_min="44dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_i4"
+        app:layout_constraintWidth_percent="0.64" />
+
+    <FrameLayout
+        android:id="@+id/btn_start"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_brush_exit"
+        android:backgroundTint="@color/color_green"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:focusable="true"
+        android:stateListAnimator="@null"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="64dp"
+        app:layout_constraintHeight_min="44dp"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline_start">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/menu_start"
+            android:src="@drawable/ic_arrow_next" />
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
