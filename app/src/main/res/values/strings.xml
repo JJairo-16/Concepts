@@ -17,5 +17,17 @@
 
     <!-- Common -->
     <string name="menu_return">RETURN</string>
-    <string name="menu_start">START</string>
+    <string name="menu_exit">EXIT</string>
+
+    <!-- Game I3: What is your favourite colour? -->
+    <string name="game_i3_info">WHEN A COLOUR IS INSIDE THE BOX, THE APP SAYS ITS NAME IN ENGLISH</string>
+    <string name="game_i3_title">WHAT IS YOUR FAVOURITE COLOUR?</string>
+    <string name="game_i3_instruction">DRAG THE COLOURS YOU LIKE BEST INTO THE BOX</string>
+    <string name="game_i3_box_desc">Box</string>
+    <string name="game_i3_color_red">Red</string>
+    <string name="game_i3_color_orange">Orange</string>
+    <string name="game_i3_color_yellow">Yellow</string>
+    <string name="game_i3_color_green">Green</string>
+    <string name="game_i3_color_blue">Blue</string>
+    <string name="game_i3_color_purple">Purple</string>
 </resources>

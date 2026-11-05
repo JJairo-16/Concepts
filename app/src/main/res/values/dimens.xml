@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Decorative background blobs -->
+    <dimen name="blob_large_width">180dp</dimen>
+    <dimen name="blob_large_height">120dp</dimen>
+    <dimen name="blob_small_width">80dp</dimen>
+    <dimen name="blob_small_height">60dp</dimen>
+    <dimen name="blob_offset_x">60dp</dimen>
+    <dimen name="blob_offset_x_neg">-60dp</dimen>
+    <dimen name="blob_offset_y_neg">-40dp</dimen>
+    <dimen name="blob_bottom_offset">45dp</dimen>
+    <dimen name="blob_small_offset_x">35dp</dimen>
+    <dimen name="blob_small_offset_x_neg">-35dp</dimen>
+
+    <!-- Initial screen -->
+    <dimen name="logo_margin_top">16dp</dimen>
+    <dimen name="logo_max_height">260dp</dimen>
+    <dimen name="logo_min_height">90dp</dimen>
+    <dimen name="start_button_max_height">64dp</dimen>
+    <dimen name="start_button_min_height">44dp</dimen>
+    <dimen name="start_arrow_size">30dp</dimen>
+
+    <!-- Menus and brush buttons -->
+    <dimen name="menu_button_margin_top">12dp</dimen>
+    <dimen name="menu_button_max_height">84dp</dimen>
+    <dimen name="menu_button_min_height">44dp</dimen>
+    <dimen name="brush_button_height">84dp</dimen>
+    <dimen name="activity_button_height">72dp</dimen>
+    <dimen name="activity_button_spacing">32dp</dimen>
+    <dimen name="return_button_height">56dp</dimen>
+    <dimen name="menu_button_elevation">6dp</dimen>
+    <dimen name="menu_button_padding_h">32dp</dimen>
+    <dimen name="menu_activity_padding_h">20dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="menu_title_text_size">72sp</dimen>
+    <dimen name="brush_text_size">40sp</dimen>
+    <dimen name="return_text_size">26sp</dimen>
+    <dimen name="autosize_min_text_size">22sp</dimen>
+    <dimen name="autosize_max_text_size">42sp</dimen>
+    <dimen name="autosize_step">2sp</dimen>
+    <dimen name="level_button_min_text_size">28sp</dimen>
+    <dimen name="level_button_max_text_size">56sp</dimen>
+
+    <!-- Game I3: What is your favourite colour? -->
+    <dimen name="game_info_text_size">21sp</dimen>
+    <dimen name="game_title_text_size">52sp</dimen>
+    <dimen name="game_instruction_text_size">25sp</dimen>
+    <dimen name="game_icon_width">84dp</dimen>
+    <dimen name="game_icon_height">48dp</dimen>
+    <dimen name="game_icon_margin_end">16dp</dimen>
+    <dimen name="game_title_margin_end">24dp</dimen>
+    <dimen name="game_colors_row_height">100dp</dimen>
+    <dimen name="game_return_margin_end">26dp</dimen>
+    <dimen name="game_return_margin_bottom">46dp</dimen>
+
+</resources>
