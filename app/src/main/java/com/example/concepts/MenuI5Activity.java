@@ -1,14 +1,46 @@
 package com.example.concepts;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MenuI5Activity extends AppCompatActivity {
+/**
+ * Menu for level I5, opened from {@link MainActivity}.
+ * Delegates the opening sound and RETURN action to {@link TransitionSound}.
+ */
+public class MenuI5Activity extends AppCompatActivity implements View.OnClickListener {
 
+    /**
+     * Loads the menu layout and configures the RETURN and activity buttons.
+     *
+     * @param savedInstanceState state saved by Android, or {@code null} on first creation
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_i5);
+
+        TransitionSound.bindMenu(this, savedInstanceState);
+        findViewById(R.id.btn_activity_1).setOnClickListener(this);
+        findViewById(R.id.btn_activity_2).setOnClickListener(this);
     }
+
+    /**
+     * Determines which activity button was clicked. Opening the corresponding screen
+     * is pending implementation.
+     *
+     * @param view view that received the click
+     */
+    @Override
+    public void onClick(View view) {
+        int id = view.getId();
+
+        if (id == R.id.btn_activity_1) {
+            // TODO: Open activity 1.
+        } else if (id == R.id.btn_activity_2) {
+            // TODO: Open activity 2.
+        }
+    }
+
 }

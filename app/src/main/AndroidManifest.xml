@@ -37,6 +37,10 @@
             android:name=".MenuI5Activity"
             android:exported="false"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".GameI3Activity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>
