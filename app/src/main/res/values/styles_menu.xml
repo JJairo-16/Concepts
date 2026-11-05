@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ConceptsMenuButton" parent="android:style/Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/menu_button_height</item>
+        <item name="android:layout_marginBottom">@dimen/menu_button_gap</item>
+        <item name="android:background">@drawable/menu_button</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:fontFamily">sans-serif-rounded</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+</resources>

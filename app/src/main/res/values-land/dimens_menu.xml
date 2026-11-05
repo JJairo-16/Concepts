@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menu_button_height">60dp</dimen>
+    <dimen name="menu_button_gap">10dp</dimen>
+    <dimen name="menu_logo_size">240dp</dimen>
+</resources>
