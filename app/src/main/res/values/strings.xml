@@ -17,7 +17,7 @@
 
     <!-- Common -->
     <string name="menu_return">RETURN</string>
-    <string name="menu_start">START</string>
+    <string name="menu_exit">EXIT</string>
 
     <!-- Game I3: What is your favourite colour? -->
     <string name="game_i3_info">WHEN A COLOUR IS INSIDE THE BOX, THE APP SAYS ITS NAME IN ENGLISH</string>

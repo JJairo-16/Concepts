@@ -156,7 +156,7 @@
         app:layout_constraintWidth_percent="0.64" />
 
     <FrameLayout
-        android:id="@+id/btn_start"
+        android:id="@+id/btn_exit"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/bg_brush_exit"
@@ -177,7 +177,7 @@
             android:layout_width="@dimen/start_arrow_size"
             android:layout_height="@dimen/start_arrow_size"
             android:layout_gravity="center"
-            android:contentDescription="@string/menu_start"
+            android:contentDescription="@string/menu_exit"
             android:src="@drawable/ic_arrow_next" />
 
     </FrameLayout>
