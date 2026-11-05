@@ -30,14 +30,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setListener(R.id.btn_start);
+        setListener(R.id.btn_exit);
         setListener(R.id.btn_i3);
         setListener(R.id.btn_i4);
         setListener(R.id.btn_i5);
     }
 
     /**
-     * Closes the app when START is pressed or opens the selected level menu.
+     * Closes the app when EXIT is pressed or opens the selected level menu.
      *
      * @param view view that received the click
      */
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         int id = view.getId();
 
-        if (id == R.id.btn_start) {
+        if (id == R.id.btn_exit) {
             finish();
             System.exit(0);
             return;

@@ -1,8 +1,10 @@
 package com.example.concepts;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
@@ -10,6 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
  * Delegates the opening sound and RETURN action to {@link TransitionSound}.
  */
 public class MenuI3Activity extends AppCompatActivity implements View.OnClickListener {
+
+    /** Launches the game and receives its RETURN result. */
+    private final ActivityResultLauncher<Intent> gameLauncher =
+            TransitionSound.registerMenuLauncher(this);
 
     /**
      * Loads the menu layout and configures the RETURN and activity buttons.
@@ -26,8 +32,7 @@ public class MenuI3Activity extends AppCompatActivity implements View.OnClickLis
     }
 
     /**
-     * Handles clicks on the activity button. Opening the corresponding screen
-     * is pending implementation.
+     * Opens the I3 game when the activity button is clicked.
      *
      * @param view view that received the click
      */
@@ -36,7 +41,7 @@ public class MenuI3Activity extends AppCompatActivity implements View.OnClickLis
         int id = view.getId();
 
         if (id == R.id.btn_activity_1) {
-            // TODO: Open activity 1.
+            gameLauncher.launch(new Intent(this, GameI3Activity.class));
         }
     }
 
