@@ -55,4 +55,13 @@
     <dimen name="game_return_margin_end">26dp</dimen>
     <dimen name="game_return_margin_bottom">46dp</dimen>
 
+    <!-- Game: Listen and click -->
+    <dimen name="listen_icon_width">240dp</dimen>
+    <dimen name="listen_icon_height">192dp</dimen>
+    <dimen name="again_button_width">166dp</dimen>
+    <dimen name="again_button_height">48dp</dimen>
+    <dimen name="again_text_size">28sp</dimen>
+    <dimen name="again_stroke_width">3dp</dimen>
+    <dimen name="again_corner_radius">24dp</dimen>
+
 </resources>
