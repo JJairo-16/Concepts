@@ -15,13 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
  * Game screen opened from the I3 menu.
  */
 public class GameI3ActivityCopy extends AppCompatActivity implements View.OnClickListener, View.OnDragListener {
-
-    /**
-     * Launcher registered during activity initialization to open the menus.
-     */
-    private final ActivityResultLauncher<Intent> menuLauncher =
-            TransitionSound.registerMenuLauncher(this);
-
     private final ColorShuffler shuffler = new ColorShuffler();
     private final SoundPlayer player = new SoundPlayer(this);
 
@@ -33,7 +26,7 @@ public class GameI3ActivityCopy extends AppCompatActivity implements View.OnClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_i3);
+        setContentView(R.layout.activity_favorite_color);
 
         TransitionSound.bindMenu(this, savedInstanceState);
         findViewById(R.id.iv_instruction_icon).setOnClickListener(this);

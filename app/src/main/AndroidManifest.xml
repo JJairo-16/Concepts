@@ -38,7 +38,7 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".GameI3Activity"
+            android:name=".FavoriteColorActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity

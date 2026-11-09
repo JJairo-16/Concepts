@@ -220,6 +220,15 @@
             android:scaleType="fitCenter"
             android:src="@drawable/i3_blob_blue" />
 
+        <ImageView
+            android:id="@+id/iv_color_purple"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/game_i3_color_purple"
+            android:scaleType="fitCenter"
+            android:src="@drawable/i3_blob_purple" />
+
     </LinearLayout>
 
     <!-- Repeat the sound -->

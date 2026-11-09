@@ -14,14 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 /**
  * Game screen opened from the I3 menu.
  */
-public class GameI3Activity extends AppCompatActivity implements View.OnDragListener {
-
-    /**
-     * Launcher registered during activity initialization to open the menus.
-     */
-    private final ActivityResultLauncher<Intent> menuLauncher =
-            TransitionSound.registerMenuLauncher(this);
-
+public class FavoriteColorActivity extends AppCompatActivity implements View.OnDragListener {
     private final SoundPlayer player = new SoundPlayer(this);
 
     /**
@@ -32,7 +25,7 @@ public class GameI3Activity extends AppCompatActivity implements View.OnDragList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activvity_favorite_color);
+        setContentView(R.layout.activity_favorite_color);
 
         TransitionSound.bindMenu(this, savedInstanceState);
         setDragListener();

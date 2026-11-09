@@ -41,7 +41,7 @@ public class MenuI3Activity extends AppCompatActivity implements View.OnClickLis
         int id = view.getId();
 
         if (id == R.id.btn_activity_1) {
-            gameLauncher.launch(new Intent(this, GameI3Activity.class));
+            gameLauncher.launch(new Intent(this, FavoriteColorActivity.class));
         }
     }
 
