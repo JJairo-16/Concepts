@@ -202,6 +202,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/game_i3_color_red"
+            android:pointerIcon="grab"
             android:scaleType="fitCenter"
             android:src="@drawable/i3_blob_red" />
 
@@ -211,6 +212,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/game_i3_color_orange"
+            android:pointerIcon="grab"
             android:scaleType="fitCenter"
             android:src="@drawable/i3_blob_orange" />
 
@@ -220,6 +222,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/game_i3_color_yellow"
+            android:pointerIcon="grab"
             android:scaleType="fitCenter"
             android:src="@drawable/i3_blob_yellow" />
 
@@ -229,6 +232,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/game_i3_color_green"
+            android:pointerIcon="grab"
             android:scaleType="fitCenter"
             android:src="@drawable/i3_blob_green" />
 
@@ -238,6 +242,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/game_i3_color_blue"
+            android:pointerIcon="grab"
             android:scaleType="fitCenter"
             android:src="@drawable/i3_blob_blue" />
 
@@ -247,6 +252,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/game_i3_color_purple"
+            android:pointerIcon="grab"
             android:scaleType="fitCenter"
             android:src="@drawable/i3_blob_purple" />
 
@@ -272,6 +278,7 @@
         style="@style/MenuReturnButton"
         android:layout_marginEnd="@dimen/game_return_margin_end"
         android:layout_marginBottom="@dimen/game_return_margin_bottom"
+        android:pointerIcon="hand"
         android:text="@string/menu_return"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

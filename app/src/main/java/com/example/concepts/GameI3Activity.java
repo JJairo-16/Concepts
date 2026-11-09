@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 /**
  * Game screen opened from the I3 menu.
  */
-public class GameI3Activity extends AppCompatActivity implements View.OnClickListener, View.OnDragListener {
+public class GameI3Activity extends AppCompatActivity implements View.OnDragListener {
 
     /**
      * Launcher registered during activity initialization to open the menus.
@@ -22,8 +22,10 @@ public class GameI3Activity extends AppCompatActivity implements View.OnClickLis
     private final ActivityResultLauncher<Intent> menuLauncher =
             TransitionSound.registerMenuLauncher(this);
 
+    private final SoundPlayer player = new SoundPlayer(this);
+
     /**
-     * Loads the game layout and configures the transition sound and RETURN button.
+     * Loads the game layout, shuffles the colors, and configures drag and RETURN.
      *
      * @param savedInstanceState state saved by Android, or {@code null} on first creation
      */
@@ -79,19 +81,9 @@ public class GameI3Activity extends AppCompatActivity implements View.OnClickLis
     }
 
     /**
-     * Handles clicks dispatched to this activity.
-     *
-     * @param view view that received the click
-     */
-    @Override
-    public void onClick(View view) {
-        int id = view.getId();
-    }
-
-    /**
      * Accepts local color drags and handles drops on the box.
      *
-     * @param view drop target receiving the event
+     * @param view  drop target receiving the event
      * @param event current drag event
      * @return whether the event was handled
      */
@@ -112,9 +104,15 @@ public class GameI3Activity extends AppCompatActivity implements View.OnClickLis
     /**
      * Removes a color dropped inside the box from its container.
      *
-     * @param color dragged color image
+     * @param viewColor dragged color image
      */
-    private void onColorDropped(View color) {
+    private void onColorDropped(View viewColor) {
+        Color color = Color.getColor(viewColor);
+        destroyColor(viewColor);
+        player.play(color.getSoundId());
+    }
+
+    private void destroyColor(View color) {
         if (color.getParent() instanceof ViewGroup) {
             ((ViewGroup) color.getParent()).removeView(color);
         }
