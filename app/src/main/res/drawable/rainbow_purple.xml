@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Inner band of the rainbow (purple when completed). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="252dp"
+    android:height="102dp"
+    android:viewportWidth="252"
+    android:viewportHeight="102">
+
+    <path
+        android:fillColor="@color/rainbow_slot"
+        android:pathData="M48.9167,102 A77.0833,61.6667 0 0 1 203.0833,102 L193.5,102 A67.5,54 0 0 0 58.5,102 Z"
+        android:strokeColor="@color/menu_text_dark"
+        android:strokeWidth="0.5" />
+</vector>

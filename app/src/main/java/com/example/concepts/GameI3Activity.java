@@ -30,7 +30,7 @@ public class GameI3Activity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activvity_favorite_color);
+        setContentView(R.layout.activity_favorite_color);
 
         TransitionSound.bindMenu(this, savedInstanceState);
         setDragListener();

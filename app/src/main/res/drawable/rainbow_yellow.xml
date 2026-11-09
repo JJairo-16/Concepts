@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Third band of the rainbow (yellow when completed). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="252dp"
+    android:height="102dp"
+    android:viewportWidth="252"
+    android:viewportHeight="102">
+
+    <path
+        android:fillColor="@color/rainbow_slot"
+        android:pathData="M20.1667,102 A105.8333,84.6667 0 0 1 231.8333,102 L222.25,102 A96.25,77 0 0 0 29.75,102 Z"
+        android:strokeColor="@color/menu_text_dark"
+        android:strokeWidth="0.5" />
+</vector>
