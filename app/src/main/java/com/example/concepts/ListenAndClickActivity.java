@@ -75,7 +75,7 @@ public class ListenAndClickActivity extends AppCompatActivity implements  View.O
 
         shuffler.pushInput();
         if (shuffler.hasMoreColorsToOrder()) player.play(R.raw.ok);
-        else player.play(R.raw.ok); // todo: good job
+        else player.play(R.raw.good_job);
     }
 
     private void again() {
