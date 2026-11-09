@@ -32,7 +32,7 @@ public class GameI3Activity extends AppCompatActivity implements View.OnDragList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_i3);
+        setContentView(R.layout.activvity_favorite_color);
 
         TransitionSound.bindMenu(this, savedInstanceState);
         setDragListener();

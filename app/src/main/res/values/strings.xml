@@ -30,4 +30,10 @@
     <string name="game_i3_color_green">Green</string>
     <string name="game_i3_color_blue">Blue</string>
     <string name="game_i3_color_purple">Purple</string>
+
+    <!-- Game: Listen and click -->
+    <string name="listen_click_title">LISTEN AND CLICK</string>
+    <string name="listen_click_instruction">TAP THE COLOUR YOU HEAR</string>
+    <string name="listen_click_speaker">Listen</string>
+    <string name="listen_click_again">AGAIN</string>
 </resources>
