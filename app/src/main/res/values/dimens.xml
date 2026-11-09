@@ -64,4 +64,11 @@
     <dimen name="again_stroke_width">3dp</dimen>
     <dimen name="again_corner_radius">24dp</dimen>
 
+    <!-- Game: Complete the rainbow -->
+    <dimen name="rainbow_chip_size">68dp</dimen>
+    <dimen name="rainbow_chip_gap">12dp</dimen>
+    <dimen name="rainbow_chip_radius">12dp</dimen>
+    <dimen name="rainbow_chip_stroke">3dp</dimen>
+    <dimen name="rainbow_legend_text_size">20sp</dimen>
+
 </resources>

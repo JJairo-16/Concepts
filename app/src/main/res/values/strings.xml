@@ -36,4 +36,9 @@
     <string name="listen_click_instruction">TAP THE COLOUR YOU HEAR</string>
     <string name="listen_click_speaker">Listen</string>
     <string name="listen_click_again">AGAIN</string>
+
+    <!-- Game: Complete the rainbow -->
+    <string name="rainbow_title">COMPLETE THE RAINBOW</string>
+    <string name="rainbow_instruction">DRAG THE COLOURS INTO THE RIGHT ORDER</string>
+    <string name="rainbow_legend">RED · ORANGE · YELLOW · GREEN · BLUE · PURPLE</string>
 </resources>

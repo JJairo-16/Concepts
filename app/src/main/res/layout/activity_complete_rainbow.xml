@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rainbow_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_menu">
+
+    <!-- Decorative background blobs -->
+    <ImageView
+        android:layout_width="@dimen/blob_large_width"
+        android:layout_height="@dimen/blob_large_height"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        app:tint="@color/blob_yellow"
+        android:translationX="@dimen/blob_offset_x_neg"
+        android:translationY="@dimen/blob_offset_y_neg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/blob_large_width"
+        android:layout_height="@dimen/blob_large_height"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        app:tint="@color/blob_pink"
+        android:translationX="@dimen/blob_offset_x"
+        android:translationY="@dimen/blob_offset_y_neg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/blob_small_width"
+        android:layout_height="@dimen/blob_small_height"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        app:tint="@color/blob_blue"
+        android:translationX="@dimen/blob_small_offset_x_neg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/blob_small_width"
+        android:layout_height="@dimen/blob_small_height"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        app:tint="@color/blob_peach"
+        android:translationX="@dimen/blob_small_offset_x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/blob_large_width"
+        android:layout_height="@dimen/blob_large_height"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        app:tint="@color/blob_green"
+        android:translationX="@dimen/blob_offset_x_neg"
+        android:translationY="@dimen/blob_bottom_offset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/blob_large_width"
+        android:layout_height="@dimen/blob_large_height"
+        android:alpha="0.9"
+        android:importantForAccessibility="no"
+        android:src="@drawable/bg_blob"
+        app:tint="@color/blob_lavender"
+        android:translationX="@dimen/blob_offset_x"
+        android:translationY="@dimen/blob_bottom_offset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Guides -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.148" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_rainbow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.19" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_chips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.705" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_legend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.815" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_rainbow_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/game_title_margin_end"
+        android:fontFamily="sans-serif-black"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:text="@string/rainbow_title"
+        android:textColor="@color/game_i3_brown"
+        android:textSize="@dimen/game_title_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_x"
+        app:layout_constraintTop_toTopOf="@id/guideline_title" />
+
+    <!-- Instruction -->
+    <TextView
+        android:id="@+id/tv_rainbow_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:text="@string/rainbow_instruction"
+        android:textColor="@color/game_i3_text"
+        android:textSize="@dimen/game_instruction_text_size"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_x"
+        app:layout_constraintTop_toTopOf="@id/guideline_subtitle" />
+
+    <!-- Rainbow: six concentric bands, each one separated by a black line -->
+    <FrameLayout
+        android:id="@+id/rainbow_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="252:102"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline_rainbow"
+        app:layout_constraintWidth_percent="0.70">
+
+        <ImageView
+            android:id="@+id/iv_rainbow_red"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/game_i3_color_red"
+            android:scaleType="fitCenter"
+            android:src="@drawable/rainbow_red" />
+
+        <ImageView
+            android:id="@+id/iv_rainbow_orange"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/game_i3_color_orange"
+            android:scaleType="fitCenter"
+            android:src="@drawable/rainbow_orange" />
+
+        <ImageView
+            android:id="@+id/iv_rainbow_yellow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/game_i3_color_yellow"
+            android:scaleType="fitCenter"
+            android:src="@drawable/rainbow_yellow" />
+
+        <ImageView
+            android:id="@+id/iv_rainbow_green"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/game_i3_color_green"
+            android:scaleType="fitCenter"
+            android:src="@drawable/rainbow_green" />
+
+        <ImageView
+            android:id="@+id/iv_rainbow_blue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/game_i3_color_blue"
+            android:scaleType="fitCenter"
+            android:src="@drawable/rainbow_blue" />
+
+        <ImageView
+            android:id="@+id/iv_rainbow_purple"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/game_i3_color_purple"
+            android:scaleType="fitCenter"
+            android:src="@drawable/rainbow_purple" />
+
+    </FrameLayout>
+
+    <!-- Colour chips -->
+    <LinearLayout
+        android:id="@+id/chips_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline_chips">
+
+        <ImageView
+            android:id="@+id/iv_chip_red"
+            android:layout_width="@dimen/rainbow_chip_size"
+            android:layout_height="@dimen/rainbow_chip_size"
+            android:background="@drawable/chip_red"
+            android:contentDescription="@string/game_i3_color_red"
+            android:pointerIcon="grab" />
+
+        <ImageView
+            android:id="@+id/iv_chip_orange"
+            android:layout_width="@dimen/rainbow_chip_size"
+            android:layout_height="@dimen/rainbow_chip_size"
+            android:layout_marginStart="@dimen/rainbow_chip_gap"
+            android:background="@drawable/chip_orange"
+            android:contentDescription="@string/game_i3_color_orange"
+            android:pointerIcon="grab" />
+
+        <ImageView
+            android:id="@+id/iv_chip_yellow"
+            android:layout_width="@dimen/rainbow_chip_size"
+            android:layout_height="@dimen/rainbow_chip_size"
+            android:layout_marginStart="@dimen/rainbow_chip_gap"
+            android:background="@drawable/chip_yellow"
+            android:contentDescription="@string/game_i3_color_yellow"
+            android:pointerIcon="grab" />
+
+        <ImageView
+            android:id="@+id/iv_chip_green"
+            android:layout_width="@dimen/rainbow_chip_size"
+            android:layout_height="@dimen/rainbow_chip_size"
+            android:layout_marginStart="@dimen/rainbow_chip_gap"
+            android:background="@drawable/chip_green"
+            android:contentDescription="@string/game_i3_color_green"
+            android:pointerIcon="grab" />
+
+        <ImageView
+            android:id="@+id/iv_chip_blue"
+            android:layout_width="@dimen/rainbow_chip_size"
+            android:layout_height="@dimen/rainbow_chip_size"
+            android:layout_marginStart="@dimen/rainbow_chip_gap"
+            android:background="@drawable/chip_blue"
+            android:contentDescription="@string/game_i3_color_blue"
+            android:pointerIcon="grab" />
+
+        <ImageView
+            android:id="@+id/iv_chip_purple"
+            android:layout_width="@dimen/rainbow_chip_size"
+            android:layout_height="@dimen/rainbow_chip_size"
+            android:layout_marginStart="@dimen/rainbow_chip_gap"
+            android:background="@drawable/chip_purple"
+            android:contentDescription="@string/game_i3_color_purple"
+            android:pointerIcon="grab" />
+
+    </LinearLayout>
+
+    <!-- Colour legend -->
+    <TextView
+        android:id="@+id/tv_rainbow_legend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.04"
+        android:maxLines="1"
+        android:text="@string/rainbow_legend"
+        android:textColor="@color/game_i3_teal"
+        android:textSize="@dimen/rainbow_legend_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline_legend" />
+
+    <!-- Return -->
+    <TextView
+        android:id="@+id/btn_return"
+        style="@style/MenuReturnButton"
+        android:layout_marginEnd="@dimen/game_return_margin_end"
+        android:layout_marginBottom="@dimen/game_return_margin_bottom"
+        android:text="@string/menu_return"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.28" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
