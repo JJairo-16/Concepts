@@ -74,4 +74,12 @@
     <dimen name="rainbow_chip_stroke">4dp</dimen>
     <dimen name="rainbow_legend_text_size">30sp</dimen>
 
+    <!-- Game: Colours and shapes -->
+    <dimen name="word_text_size">54sp</dimen>
+    <dimen name="word_padding_h">30dp</dimen>
+    <dimen name="word_padding_v">10dp</dimen>
+    <dimen name="word_stroke_width">4dp</dimen>
+    <dimen name="word_corner_radius">21dp</dimen>
+    <dimen name="shape_size">180dp</dimen>
+
 </resources>

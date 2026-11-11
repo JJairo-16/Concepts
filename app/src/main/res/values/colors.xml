@@ -31,4 +31,7 @@
 
     <!-- Complete the rainbow -->
     <color name="rainbow_slot">#DCE1E6</color>
+
+    <!-- Colours and shapes -->
+    <color name="shape_outline">#4F4F4F</color>
 </resources>
