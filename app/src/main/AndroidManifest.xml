@@ -46,6 +46,10 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".ColoursAndShapesActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".CompleteRainbow"
             android:exported="false"
             android:screenOrientation="landscape" />

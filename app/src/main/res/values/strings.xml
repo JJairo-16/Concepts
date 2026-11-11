@@ -41,4 +41,14 @@
     <string name="rainbow_title">COMPLETE THE RAINBOW</string>
     <string name="rainbow_instruction">DRAG THE COLOURS INTO THE RIGHT ORDER</string>
     <string name="rainbow_legend">RED · ORANGE · YELLOW · GREEN · BLUE · PURPLE</string>
+
+    <!-- Game: Colours and shapes -->
+    <string name="colours_shapes_title">COLOURS AND SHAPES</string>
+    <string name="colours_shapes_instruction">MATCH EACH WORD WITH ITS SHAPE</string>
+    <string name="colours_shapes_star">Purple star</string>
+    <string name="colours_shapes_heart">Red heart</string>
+    <string name="colours_shapes_triangle">Yellow triangle</string>
+    <string name="colours_shapes_hexagon">Orange hexagon</string>
+    <string name="colours_shapes_circle">Blue circle</string>
+    <string name="colours_shapes_square">Green square</string>
 </resources>
