@@ -218,7 +218,9 @@
         android:id="@+id/chips_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:divider="@drawable/rainbow_chip_divider"
         android:orientation="horizontal"
+        android:showDividers="middle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideline_chips">
@@ -235,7 +237,6 @@
             android:id="@+id/iv_chip_orange"
             android:layout_width="@dimen/rainbow_chip_size"
             android:layout_height="@dimen/rainbow_chip_size"
-            android:layout_marginStart="@dimen/rainbow_chip_gap"
             android:background="@drawable/chip_orange"
             android:contentDescription="@string/game_i3_color_orange"
             android:pointerIcon="grab" />
@@ -244,7 +245,6 @@
             android:id="@+id/iv_chip_yellow"
             android:layout_width="@dimen/rainbow_chip_size"
             android:layout_height="@dimen/rainbow_chip_size"
-            android:layout_marginStart="@dimen/rainbow_chip_gap"
             android:background="@drawable/chip_yellow"
             android:contentDescription="@string/game_i3_color_yellow"
             android:pointerIcon="grab" />
@@ -253,7 +253,6 @@
             android:id="@+id/iv_chip_green"
             android:layout_width="@dimen/rainbow_chip_size"
             android:layout_height="@dimen/rainbow_chip_size"
-            android:layout_marginStart="@dimen/rainbow_chip_gap"
             android:background="@drawable/chip_green"
             android:contentDescription="@string/game_i3_color_green"
             android:pointerIcon="grab" />
@@ -262,7 +261,6 @@
             android:id="@+id/iv_chip_blue"
             android:layout_width="@dimen/rainbow_chip_size"
             android:layout_height="@dimen/rainbow_chip_size"
-            android:layout_marginStart="@dimen/rainbow_chip_gap"
             android:background="@drawable/chip_blue"
             android:contentDescription="@string/game_i3_color_blue"
             android:pointerIcon="grab" />
@@ -271,7 +269,6 @@
             android:id="@+id/iv_chip_purple"
             android:layout_width="@dimen/rainbow_chip_size"
             android:layout_height="@dimen/rainbow_chip_size"
-            android:layout_marginStart="@dimen/rainbow_chip_gap"
             android:background="@drawable/chip_purple"
             android:contentDescription="@string/game_i3_color_purple"
             android:pointerIcon="grab" />
@@ -279,20 +276,6 @@
     </LinearLayout>
 
     <!-- Colour legend -->
-    <TextView
-        android:id="@+id/tv_rainbow_legend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:includeFontPadding="false"
-        android:letterSpacing="0.04"
-        android:maxLines="1"
-        android:text="@string/rainbow_legend"
-        android:textColor="@color/game_i3_teal"
-        android:textSize="@dimen/rainbow_legend_text_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline_legend" />
 
     <!-- Return -->
     <TextView

@@ -177,7 +177,7 @@
         app:layout_constraintWidth_percent="0.623">
 
         <ImageView
-            android:id="@+id/iv_color_red2"
+            android:id="@+id/iv_color_red"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

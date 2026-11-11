@@ -32,8 +32,7 @@ public class MenuI4Activity extends AppCompatActivity implements View.OnClickLis
     }
 
     /**
-     * Determines which activity button was clicked. Opening the corresponding screen
-     * is pending implementation.
+     * Opens the corresponding I4 activity.
      *
      * @param view view that received the click
      */
@@ -44,7 +43,7 @@ public class MenuI4Activity extends AppCompatActivity implements View.OnClickLis
         if (id == R.id.btn_activity_1) {
             gameLauncher.launch(new Intent(this, ListenAndClickActivity.class));
         } else if (id == R.id.btn_activity_2) {
-            // TODO: Open activity 2.
+            gameLauncher.launch(new Intent(this, CompleteRainbow.class));
         }
     }
 
