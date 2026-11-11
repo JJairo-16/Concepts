@@ -160,7 +160,7 @@
         android:layout_height="@dimen/listen_icon_height"
         android:contentDescription="@string/listen_click_speaker"
         android:scaleType="fitCenter"
-        android:src="@drawable/ic_listen"
+        android:src="@drawable/ic_listen_animated"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideline_speaker" />
