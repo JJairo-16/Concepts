@@ -79,4 +79,11 @@
     <dimen name="word_corner_radius">14dp</dimen>
     <dimen name="shape_size">120dp</dimen>
 
+    <!-- Game: Find the colour -->
+    <dimen name="find_card_stroke_width">3dp</dimen>
+    <dimen name="find_card_corner_radius">26dp</dimen>
+    <dimen name="find_speaker_width">186dp</dimen>
+    <dimen name="find_scene_stroke_width">3dp</dimen>
+    <dimen name="find_scene_corner_radius">26dp</dimen>
+
 </resources>

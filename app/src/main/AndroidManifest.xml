@@ -53,6 +53,10 @@
             android:name=".CompleteRainbow"
             android:exported="false"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".FindTheColourActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>
