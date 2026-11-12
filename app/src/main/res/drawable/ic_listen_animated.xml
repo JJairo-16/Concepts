@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:drawable="@drawable/ic_listen">
+    <!-- Each wave starts when the previous wave begins its reverse pass. -->
+    <target android:name="inner_wave">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="strokeColor"
+                android:startOffset="0"
+                android:duration="120"
+                android:repeatCount="1"
+                android:repeatMode="reverse"
+                android:valueFrom="@color/black"
+                android:valueTo="@color/color_orange"
+                android:valueType="colorType" />
+        </aapt:attr>
+    </target>
+    <target android:name="middle_wave">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="strokeColor"
+                android:startOffset="120"
+                android:duration="120"
+                android:repeatCount="1"
+                android:repeatMode="reverse"
+                android:valueFrom="@color/black"
+                android:valueTo="@color/color_orange"
+                android:valueType="colorType" />
+        </aapt:attr>
+    </target>
+    <target android:name="outer_wave">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="strokeColor"
+                android:startOffset="240"
+                android:duration="120"
+                android:repeatCount="1"
+                android:repeatMode="reverse"
+                android:valueFrom="@color/black"
+                android:valueTo="@color/color_orange"
+                android:valueType="colorType" />
+        </aapt:attr>
+    </target>
+</animated-vector>

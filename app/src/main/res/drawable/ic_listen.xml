@@ -7,30 +7,33 @@
 
     <!-- Speaker body -->
     <path
-        android:fillColor="#2B2B2B"
+        android:fillColor="@color/black"
         android:pathData="M4,30 L15,30 L34,16 L34,64 L15,50 L4,50 Z" />
 
     <!-- Inner sound wave -->
     <path
+        android:name="inner_wave"
         android:fillColor="#00000000"
         android:pathData="M43,23 A17,17 0 0 1 43,57"
-        android:strokeColor="#2B2B2B"
+        android:strokeColor="@color/black"
         android:strokeLineCap="round"
         android:strokeWidth="6" />
 
     <!-- Middle sound wave -->
     <path
+        android:name="middle_wave"
         android:fillColor="#00000000"
         android:pathData="M54,14 A26,26 0 0 1 54,66"
-        android:strokeColor="#2B2B2B"
+        android:strokeColor="@color/black"
         android:strokeLineCap="round"
         android:strokeWidth="6" />
 
     <!-- Outer sound wave -->
     <path
+        android:name="outer_wave"
         android:fillColor="#00000000"
         android:pathData="M61,5 A35,35 0 0 1 61,75"
-        android:strokeColor="@color/color_orange"
+        android:strokeColor="@color/black"
         android:strokeLineCap="round"
         android:strokeWidth="6" />
 </vector>

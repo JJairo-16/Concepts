@@ -1,8 +1,10 @@
 package com.example.concepts;
 
+import android.graphics.drawable.AnimatedVectorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -84,7 +86,15 @@ public class ListenAndClickActivity extends AppCompatActivity implements  View.O
             return;
         }
 
+        animateListenIcon();
         Color color = shuffler.getInputColor();
         player.play(color.getSoundId());
+    }
+
+    private void animateListenIcon() {
+        ImageView listenIcon = findViewById(R.id.iv_listen_icon);
+        AnimatedVectorDrawable animation = (AnimatedVectorDrawable) listenIcon.getDrawable();
+        animation.reset();
+        animation.start();
     }
 }
