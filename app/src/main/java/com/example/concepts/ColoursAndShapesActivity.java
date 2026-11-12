@@ -7,10 +7,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-/** Runs the I5 color matching game. Selecting a word starts a pointer-following line. A correct shape fixes the line and disables the pair, while an incorrect shape clears the selection. */
+/**
+ * Runs the I5 color matching game. Selecting a word starts a pointer-following line. A correct shape fixes the line and disables the pair, while an incorrect shape clears the selection.
+ */
 public class ColoursAndShapesActivity extends AppCompatActivity {
 
     private static final int[] WORD_IDS = {
@@ -64,7 +67,9 @@ public class ColoursAndShapesActivity extends AppCompatActivity {
         shuffleWords();
     }
 
-    /** Assigns words to shuffled row positions while retaining their original shape associations. */
+    /**
+     * Assigns words to shuffled row positions while retaining their original shape associations.
+     */
     private void shuffleWords() {
         int[] rows = new int[words.length];
         for (int index = 0; index < words.length; index++) {
@@ -176,7 +181,7 @@ public class ColoursAndShapesActivity extends AppCompatActivity {
          * @param canvas canvas for the current drawing pass
          */
         @Override
-        protected void onDraw(Canvas canvas) {
+        protected void onDraw(@NonNull Canvas canvas) {
             super.onDraw(canvas);
             if (fixed) {
                 for (int index = 0; index < words.length; index++) {

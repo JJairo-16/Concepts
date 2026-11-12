@@ -38,7 +38,7 @@ public class MenuI5Activity extends AppCompatActivity implements View.OnClickLis
         int id = view.getId();
 
         if (id == R.id.btn_activity_1) {
-            // TODO: Open activity 1.
+            gameLauncher.launch(new Intent(this, FindTheColourActivity.class));
         } else if (id == R.id.btn_activity_2) {
             gameLauncher.launch(new Intent(this, ColoursAndShapesActivity.class));
         }

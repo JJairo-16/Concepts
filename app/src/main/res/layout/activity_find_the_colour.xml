@@ -190,7 +190,7 @@
     </FrameLayout>
 
     <!-- Scene (empty slot: the image is set later with android:src or setImageResource) -->
-    <ImageView
+    <com.example.concepts.FindColourSceneView
         android:id="@+id/iv_find_scene"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -203,19 +203,6 @@
         app:layout_constraintTop_toTopOf="@id/guideline_content" />
 
     <!-- Caption -->
-    <TextView
-        android:id="@+id/tv_find_caption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:includeFontPadding="false"
-        android:maxLines="1"
-        android:text="@string/find_colour_caption"
-        android:textColor="@color/game_i3_teal"
-        android:textSize="@dimen/game_info_text_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline_caption" />
 
     <!-- Return -->
     <TextView

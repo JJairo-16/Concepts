@@ -26,7 +26,17 @@ public final class ColorElementParser {
      * @return matching color, or {@code null} if the ID has no recognizable color
      */
     public static Color parse(ImageView view) {
-        int id = view.getId();
+        return parse(view.getResources(), view.getId());
+    }
+
+    /**
+     * Resolves a color from the name of a resource, such as a scene path's fill.
+     *
+     * @param resources resources used to resolve the ID
+     * @param id resource ID to parse
+     * @return first matching color, or {@code null}
+     */
+    static Color parse(Resources resources, int id) {
         if (id == View.NO_ID) {
             return null;
         }
@@ -36,7 +46,7 @@ public final class ColorElementParser {
             return cachedColor;
         }
 
-        return resolveAndCache(view.getResources(), id);
+        return resolveAndCache(resources, id);
     }
 
     /**
