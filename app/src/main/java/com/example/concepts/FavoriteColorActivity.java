@@ -11,9 +11,7 @@ import android.view.ViewGroup;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * Game screen opened from the I3 menu.
- */
+/** Runs the I3 favorite color activity. Dropping a color into the box plays its assigned sound and removes it from the row. */
 public class FavoriteColorActivity extends AppCompatActivity implements View.OnDragListener {
     private final SoundPlayer player = new SoundPlayer(this);
 
@@ -40,6 +38,13 @@ public class FavoriteColorActivity extends AppCompatActivity implements View.OnD
             private float downX;
             private float downY;
 
+            /**
+             * Starts a color drag when the gesture passes the touch threshold.
+             *
+             * @param color color view receiving the touch
+             * @param event current touch event
+             * @return {@code true} because the listener consumes the gesture
+             */
             @Override
             public boolean onTouch(View color, MotionEvent event) {
                 switch (event.getActionMasked()) {
@@ -105,6 +110,11 @@ public class FavoriteColorActivity extends AppCompatActivity implements View.OnD
         player.play(color.getSoundId());
     }
 
+    /**
+     * Removes the color from its current parent if it is still attached.
+     *
+     * @param color color view to remove
+     */
     private void destroyColor(View color) {
         if (color.getParent() instanceof ViewGroup) {
             ((ViewGroup) color.getParent()).removeView(color);

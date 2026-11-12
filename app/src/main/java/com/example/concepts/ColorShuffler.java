@@ -3,7 +3,7 @@ package com.example.concepts;
 import java.util.Arrays;
 import java.util.Collections;
 
-/** Generates independent permutations for display and game input. */
+/** Maintains two independently shuffled color sequences, one for display and one for game input. Each sequence has its own cursor. */
 public final class ColorShuffler {
     private final Color[] viewOrder;
     private int viewIdx = 0;
@@ -17,7 +17,7 @@ public final class ColorShuffler {
         inputOrder = shuffle();
     }
 
-    /** Returns the current color in the display order. */
+    /** Returns the current display color. Check {@link #hasMoreColorsToView()} before reading it. */
     public Color getViewColor() {
         return viewOrder[viewIdx];
     }
@@ -27,11 +27,12 @@ public final class ColorShuffler {
         viewIdx++;
     }
 
+    /** Returns whether the display cursor points to a remaining color. */
     public boolean hasMoreColorsToView() {
         return viewIdx < viewOrder.length;
     }
 
-    /** Returns the current color in the input order. */
+    /** Returns the current requested color. Check {@link #hasMoreColorsToOrder()} before reading it. */
     public Color getInputColor() {
         return inputOrder[inputIdx];
     }
@@ -41,11 +42,12 @@ public final class ColorShuffler {
         inputIdx++;
     }
 
+    /** Returns whether the input cursor points to a remaining color. */
     public boolean hasMoreColorsToOrder() {
         return inputIdx < inputOrder.length;
     }
 
-    /** Shuffles all colors, excluding their original order. */
+    /** Returns a randomly ordered array containing each color exactly once. */
     private static Color[] shuffle() {
         Color[] colors = Color.values();
         Collections.shuffle(Arrays.asList(colors));

@@ -10,14 +10,10 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-/**
- * Example instrumented test that runs on an Android device or emulator.
- */
+/** Contains an on-device smoke test for the application's Android context. */
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
-    /**
-     * Checks that the app under test has the expected package name.
-     */
+    /** Checks that the target context exposes the Concepts application package name. */
     @Test
     public void useAppContext() {
         // Context of the app under test.

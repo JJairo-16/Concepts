@@ -7,10 +7,7 @@ import android.view.View;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * Menu for level I5, opened from {@link MainActivity}.
- * Delegates the opening sound and RETURN action to {@link TransitionSound}.
- */
+/** Opens Colours and Shapes from the I5 menu. {@link TransitionSound} handles return navigation and sounds. */
 public class MenuI5Activity extends AppCompatActivity implements View.OnClickListener {
 
     private final ActivityResultLauncher<Intent> gameLauncher =
@@ -32,10 +29,9 @@ public class MenuI5Activity extends AppCompatActivity implements View.OnClickLis
     }
 
     /**
-     * Determines which activity button was clicked. Opening the corresponding screen
-     * is pending implementation.
+     * Opens Colours and Shapes when its button is pressed. The first activity button has no launch action yet.
      *
-     * @param view view that received the click
+     * @param view clicked activity button
      */
     @Override
     public void onClick(View view) {

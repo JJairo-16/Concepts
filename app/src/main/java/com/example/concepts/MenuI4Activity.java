@@ -7,10 +7,7 @@ import android.view.View;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * Menu for level I4, opened from {@link MainActivity}.
- * Delegates the opening sound and RETURN action to {@link TransitionSound}.
- */
+/** Routes the two I4 activity buttons to Listen and Click and Complete the Rainbow. {@link TransitionSound} handles return navigation and sounds. */
 public class MenuI4Activity extends AppCompatActivity implements View.OnClickListener {
 
     private final ActivityResultLauncher<Intent> gameLauncher =

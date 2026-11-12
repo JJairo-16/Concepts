@@ -7,10 +7,7 @@ import android.view.View;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * Menu for level I3, opened from {@link MainActivity}.
- * Delegates the opening sound and RETURN action to {@link TransitionSound}.
- */
+/** Opens the Favorite Color activity from the I3 menu and delegates return handling and navigation sounds to {@link TransitionSound}. */
 public class MenuI3Activity extends AppCompatActivity implements View.OnClickListener {
 
     /** Launches the game and receives its RETURN result. */

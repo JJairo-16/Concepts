@@ -4,13 +4,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Example unit test that runs on the development machine.
- */
+/** Contains a local JVM smoke test for the unit test setup. */
 public class ExampleUnitTest {
-    /**
-     * Checks that two plus two equals four.
-     */
+    /** Checks a simple arithmetic assertion without an Android runtime. */
     @Test
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);

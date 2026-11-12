@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 final class TransitionSound {
 
+    /** Prevents construction of this navigation utility class. */
     private TransitionSound() {
     }
 

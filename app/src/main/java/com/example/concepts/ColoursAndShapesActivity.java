@@ -10,9 +10,7 @@ import android.view.ViewGroup;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-/**
- * Colours and shapes game screen, opened from the I5 menu.
- */
+/** Runs the I5 color matching game. Selecting a word starts a pointer-following line. A correct shape fixes the line and disables the pair, while an incorrect shape clears the selection. */
 public class ColoursAndShapesActivity extends AppCompatActivity {
 
     private static final int[] WORD_IDS = {
@@ -36,9 +34,9 @@ public class ColoursAndShapesActivity extends AppCompatActivity {
     private float pointerY;
 
     /**
-     * Loads the colours and shapes layout.
+     * Builds the two drawing layers, binds the word and shape controls, and shuffles the word positions.
      *
-     * @param savedInstanceState state saved by Android, or {@code null} on first creation
+     * @param savedInstanceState activity state supplied by Android, or {@code null} on first creation
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +64,7 @@ public class ColoursAndShapesActivity extends AppCompatActivity {
         shuffleWords();
     }
 
+    /** Assigns words to shuffled row positions while retaining their original shape associations. */
     private void shuffleWords() {
         int[] rows = new int[words.length];
         for (int index = 0; index < words.length; index++) {
@@ -86,6 +85,11 @@ public class ColoursAndShapesActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Starts a preview from the word, switches to it, or clears it if it is already selected.
+     *
+     * @param pair index of the clicked word and its matching shape
+     */
     private void selectWord(int pair) {
         if (selectedWord == pair) {
             selectedWord = -1;
@@ -97,6 +101,11 @@ public class ColoursAndShapesActivity extends AppCompatActivity {
         previewConnection.invalidate();
     }
 
+    /**
+     * Checks the selected word against the clicked shape, clears the preview, and plays feedback. A correct pair is disabled and its connection becomes permanent.
+     *
+     * @param pair index of the clicked shape and its matching word
+     */
     private void selectShape(int pair) {
         if (selectedWord == -1) {
             return;
@@ -115,6 +124,12 @@ public class ColoursAndShapesActivity extends AppCompatActivity {
         previewConnection.invalidate();
     }
 
+    /**
+     * Updates the preview endpoint when the pointer moves, then passes the event to Android.
+     *
+     * @param event incoming motion event
+     * @return whether Android handled the event
+     */
     @Override
     public boolean dispatchGenericMotionEvent(MotionEvent event) {
         if (selectedWord != -1 && event.getActionMasked() == MotionEvent.ACTION_HOVER_MOVE) {
@@ -126,14 +141,26 @@ public class ColoursAndShapesActivity extends AppCompatActivity {
         return super.dispatchGenericMotionEvent(event);
     }
 
+    /**
+     * Returns the vertical center of a view in its parent's coordinates.
+     *
+     * @param view view whose center is needed
+     * @return vertical center in pixels
+     */
     private static float centerY(View view) {
         return view.getTop() + view.getHeight() / 2f;
     }
 
+    /** Draws either confirmed connections behind the board pieces or the live preview above them. */
     private final class ConnectionView extends View {
         private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         private final boolean fixed;
 
+        /**
+         * Creates a drawing layer for one kind of connection.
+         *
+         * @param fixed whether to draw confirmed connections instead of the preview
+         */
         ConnectionView(boolean fixed) {
             super(ColoursAndShapesActivity.this);
             this.fixed = fixed;
@@ -143,6 +170,11 @@ public class ColoursAndShapesActivity extends AppCompatActivity {
             paint.setStrokeCap(Paint.Cap.ROUND);
         }
 
+        /**
+         * Draws the connections assigned to this layer in board coordinates.
+         *
+         * @param canvas canvas for the current drawing pass
+         */
         @Override
         protected void onDraw(Canvas canvas) {
             super.onDraw(canvas);

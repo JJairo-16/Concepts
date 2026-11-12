@@ -2,6 +2,7 @@ package com.example.concepts;
 
 import android.view.View;
 
+/** Defines the six game colors and their image and sound resources. Use the exact image ID for the standard color row. */
 public enum Color {
     // todo: change sound
     RED(R.id.iv_color_red, R.raw.transition),
@@ -14,6 +15,12 @@ public enum Color {
     private final int viewId;
     private final int soundId;
 
+    /**
+     * Associates a color with its standard image and audio resources.
+     *
+     * @param viewId standard color image ID
+     * @param soundId associated raw audio resource ID
+     */
     Color(int viewId, int soundId) {
         this.viewId = viewId;
         this.soundId = soundId;
@@ -26,6 +33,7 @@ public enum Color {
         return viewId;
     }
 
+    /** Returns the raw audio resource currently assigned to this color. */
     int getSoundId() {
         return soundId;
     }

@@ -11,9 +11,7 @@ import android.view.ViewGroup;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * Game screen opened from the I3 menu.
- */
+/** Implements a variant of the I3 game that asks for colors in a shuffled order. The instruction icon plays the current target, and correct drops advance the sequence. */
 public class GameI3ActivityCopy extends AppCompatActivity implements View.OnClickListener, View.OnDragListener {
     private final ColorShuffler shuffler = new ColorShuffler();
     private final SoundPlayer player = new SoundPlayer(this);
@@ -56,6 +54,13 @@ public class GameI3ActivityCopy extends AppCompatActivity implements View.OnClic
             private float downX;
             private float downY;
 
+            /**
+             * Starts a color drag when the gesture passes the touch threshold.
+             *
+             * @param color color view receiving the touch
+             * @param event current touch event
+             * @return {@code true} because the listener consumes the gesture
+             */
             @Override
             public boolean onTouch(View color, MotionEvent event) {
                 switch (event.getActionMasked()) {
@@ -130,7 +135,7 @@ public class GameI3ActivityCopy extends AppCompatActivity implements View.OnClic
     }
 
     /**
-     * Removes a color dropped inside the box from its container.
+     * Checks a dropped color against the current target and advances the sequence only on a match.
      *
      * @param viewColor dragged color image
      */
@@ -152,6 +157,11 @@ public class GameI3ActivityCopy extends AppCompatActivity implements View.OnClic
         }
     }
 
+    /**
+     * Removes a correctly placed color from its current parent.
+     *
+     * @param color color view to remove
+     */
     private void destroyColor(View color) {
         if (color.getParent() instanceof ViewGroup) {
             ((ViewGroup) color.getParent()).removeView(color);

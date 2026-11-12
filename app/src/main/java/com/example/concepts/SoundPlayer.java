@@ -10,7 +10,7 @@ import androidx.annotation.RawRes;
 import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
 
-/** Plays raw audio resources on demand for an activity. */
+/** Plays raw audio for an activity. Each request replaces the current sound, and lifecycle or playback callbacks release the player. */
 public final class SoundPlayer implements DefaultLifecycleObserver {
 
     private final Context context;
@@ -59,12 +59,18 @@ public final class SoundPlayer implements DefaultLifecycleObserver {
         release();
     }
 
+    /**
+     * Releases the player only if the callback belongs to the current playback.
+     *
+     * @param finishedPlayer player that reported completion or failure
+     */
     private void releaseIfCurrent(MediaPlayer finishedPlayer) {
         if (finishedPlayer == player) {
             release();
         }
     }
 
+    /** Releases the current player, if any, and clears its reference. */
     private void release() {
         if (player != null) {
             player.release();

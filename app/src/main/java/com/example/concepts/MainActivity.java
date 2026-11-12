@@ -7,11 +7,7 @@ import android.view.View;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * Main screen and entry point to the I3, I4, and I5 menus.
- * Selecting a level opens its menu through a launcher that receives the result
- * when the menu closes. {@link TransitionSound} uses that result to play the transition sound.
- */
+/** Opens the I3, I4, or I5 menu from the home screen, or closes the app screen when Exit is pressed. Menu results are routed through {@link TransitionSound}. */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     /**

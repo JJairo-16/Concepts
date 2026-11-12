@@ -16,6 +16,7 @@ import androidx.core.graphics.ColorUtils;
 import java.util.HashSet;
 import java.util.Set;
 
+/** Runs the I4 rainbow game. A dragged chip previews the band under the pointer. A valid drop fills a matching, unoccupied band and plays feedback. */
 public class CompleteRainbow extends AppCompatActivity {
 
     private final ColorShuffler shuffler = new ColorShuffler();
@@ -37,6 +38,11 @@ public class CompleteRainbow extends AppCompatActivity {
     private final Set<Integer> occupiedBandIds = new HashSet<>();
     private int previewBandId = View.NO_ID;
 
+    /**
+     * Loads the board, shuffles the chips, and registers drag and return handlers.
+     *
+     * @param savedInstanceState activity state supplied by Android, or {@code null} on first creation
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +70,12 @@ public class CompleteRainbow extends AppCompatActivity {
         }
     }
 
+    /**
+     * Registers a touch listener that starts a drag once the chip moves past the touch threshold.
+     *
+     * @param chip draggable color view
+     * @param chipIndex index used as the drag payload
+     */
     private void bindChipDrag(View chip, int chipIndex) {
         int touchSlop = ViewConfiguration.get(this).getScaledTouchSlop();
         chip.setOnTouchListener(new View.OnTouchListener() {
@@ -71,6 +83,13 @@ public class CompleteRainbow extends AppCompatActivity {
             private float downY;
             private boolean dragging;
 
+            /**
+             * Tracks the starting point and starts the drag when movement exceeds the touch threshold.
+             *
+             * @param view chip receiving the gesture
+             * @param event current touch event
+             * @return {@code true} because the listener consumes the gesture
+             */
             @Override
             public boolean onTouch(View view, MotionEvent event) {
                 switch (event.getActionMasked()) {
@@ -99,6 +118,13 @@ public class CompleteRainbow extends AppCompatActivity {
         });
     }
 
+    /**
+     * Routes drag movement to the preview, drop events to validation, and exit or end events to preview cleanup.
+     *
+     * @param rainbow container receiving the drag
+     * @param event current drag event
+     * @return whether the event was handled
+     */
     private boolean handleRainbowDrag(View rainbow, DragEvent event) {
         switch (event.getAction()) {
             case DragEvent.ACTION_DRAG_STARTED:
@@ -119,6 +145,13 @@ public class CompleteRainbow extends AppCompatActivity {
         }
     }
 
+    /**
+     * Validates the target band and chip color, then commits the drop or plays error feedback for a rejected band.
+     *
+     * @param rainbow container used to interpret the drop coordinates
+     * @param event drop event carrying the chip index
+     * @return whether the chip was placed
+     */
     private boolean dropChip(View rainbow, DragEvent event) {
         int bandIndex = findBand(rainbow, event.getX(), event.getY());
         if (bandIndex == -1) {
@@ -136,6 +169,12 @@ public class CompleteRainbow extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Marks the band occupied, paints it, hides the chip, and plays the appropriate success sound.
+     *
+     * @param colorIndex index of the placed chip's color
+     * @param bandId resource ID of the destination band
+     */
     private void onCorrectDrop(int colorIndex, int bandId) {
         occupiedBandIds.add(bandId);
         paintBand(bandId, getColor(CHIP_COLORS[colorIndex]));
@@ -145,6 +184,11 @@ public class CompleteRainbow extends AppCompatActivity {
 
     /**
      * Maps container coordinates to the concentric ellipses in the rainbow vectors.
+     *
+     * @param rainbow container used to scale the drawable viewport
+     * @param x horizontal coordinate within the container
+     * @param y vertical coordinate within the container
+     * @return zero-based band index, or {@code -1} outside the bands
      */
     private int findBand(View rainbow, float x, float y) {
         // The ImageViews fit-center a 252 × 102 viewport with center at (126, 102).
@@ -163,6 +207,12 @@ public class CompleteRainbow extends AppCompatActivity {
         return Math.min(BAND_IDS.length - 1, (int) ((1 - radius) / bandWidth));
     }
 
+    /**
+     * Moves or clears the drag preview while leaving occupied bands intact.
+     *
+     * @param bandIndex candidate band index, or {@code -1} to clear the preview
+     * @param chipIndex index of the dragged chip's color
+     */
     private void updatePreview(int bandIndex, int chipIndex) {
         int bandId = bandIndex >= 0 ? BAND_IDS[bandIndex] : View.NO_ID;
         if (occupiedBandIds.contains(bandId)) {
@@ -182,6 +232,12 @@ public class CompleteRainbow extends AppCompatActivity {
         }
     }
 
+    /**
+     * Applies the requested color filter to a band.
+     *
+     * @param bandId resource ID of the band view
+     * @param color resolved ARGB color
+     */
     private void paintBand(int bandId, int color) {
         ImageView band = findViewById(bandId);
         band.setColorFilter(color, PorterDuff.Mode.MULTIPLY);

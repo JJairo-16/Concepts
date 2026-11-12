@@ -8,9 +8,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * Listen and click game screen, opened from the I4 menu.
- */
+/** Runs the I4 listening game. The display order is shuffled independently of the requested colors. Again plays the current prompt, and a correct click advances to the next color. */
 public class ListenAndClickActivity extends AppCompatActivity implements  View.OnClickListener{
 
     private final ColorShuffler shuffler = new ColorShuffler();
@@ -45,6 +43,7 @@ public class ListenAndClickActivity extends AppCompatActivity implements  View.O
         }
     }
 
+    /** Registers the Again button and all color choices with this activity. */
     private void setOnClickListeners() {
         setOnClickListener(R.id.btn_again);
 
@@ -56,10 +55,20 @@ public class ListenAndClickActivity extends AppCompatActivity implements  View.O
         setOnClickListener(R.id.iv_color_purple);
     }
 
+    /**
+     * Routes clicks on the specified layout view to this activity.
+     *
+     * @param id resource ID of the clickable view
+     */
     private void setOnClickListener(int id) {
         findViewById(id).setOnClickListener(this);
     }
 
+    /**
+     * Replays the current prompt or checks the selected color and plays feedback.
+     *
+     * @param v clicked button or color image
+     */
     @Override
     public void onClick(View v) {
         int id = v.getId();
@@ -80,6 +89,7 @@ public class ListenAndClickActivity extends AppCompatActivity implements  View.O
         else player.play(R.raw.good_job);
     }
 
+    /** Animates the speaker and plays the current color prompt while a round remains. Otherwise plays the error sound. */
     private void again() {
         if (!shuffler.hasMoreColorsToOrder()) {
             player.play(R.raw.meh);
@@ -91,6 +101,7 @@ public class ListenAndClickActivity extends AppCompatActivity implements  View.O
         player.play(color.getSoundId());
     }
 
+    /** Resets the animated drawable and starts its wave sequence from the beginning. */
     private void animateListenIcon() {
         ImageView listenIcon = findViewById(R.id.iv_listen_icon);
         AnimatedVectorDrawable animation = (AnimatedVectorDrawable) listenIcon.getDrawable();
