@@ -51,4 +51,11 @@
     <string name="colours_shapes_hexagon">Orange hexagon</string>
     <string name="colours_shapes_circle">Blue circle</string>
     <string name="colours_shapes_square">Green square</string>
+
+    <!-- Game: Find the colour -->
+    <string name="find_colour_title">FIND THE COLOUR</string>
+    <string name="find_colour_instruction">CLICK THE ELEMENT THAT MATCHES THE COLOUR</string>
+    <string name="find_colour_caption">THE APP SAYS THE COLOUR IN ENGLISH · CLICK TO CHECK IT</string>
+    <string name="find_colour_speaker">Listen</string>
+    <string name="find_colour_scene_desc">Scene with a house, a tree, the sun and flowers</string>
 </resources>

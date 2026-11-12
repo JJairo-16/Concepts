@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="1000dp"
+    android:height="614dp"
+    android:viewportWidth="1000"
+    android:viewportHeight="614">
+
+    <!-- Scene background -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M40,0 H960 C982,0 1000,18 1000,40 V574 C1000,596 982,614 960,614 H40 C18,614 0,596 0,574 V40 C0,18 18,0 40,0 Z" />
+
+    <!-- Clouds -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M143,95 A72,42 0 1,1 287,95 A72,42 0 1,1 143,95 Z"
+        android:strokeColor="@color/game_i3_text"
+        android:strokeWidth="5" />
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M485,88 A55,28 0 1,1 595,88 A55,28 0 1,1 485,88 Z"
+        android:strokeColor="@color/game_i3_text"
+        android:strokeWidth="5" />
+
+    <!-- Sun -->
+    <path
+        android:fillColor="@color/color_yellow"
+        android:pathData="M827,108 A58,58 0 1,1 943,108 A58,58 0 1,1 827,108 Z"
+        android:strokeColor="@color/game_i3_text"
+        android:strokeWidth="5" />
+
+    <!-- House walls -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M148,262 H362 V470 H148 Z"
+        android:strokeColor="@color/game_i3_text"
+        android:strokeLineJoin="round"
+        android:strokeWidth="6" />
+
+    <!-- House roof -->
+    <path
+        android:fillColor="@color/color_red"
+        android:pathData="M100,262 L255,140 L410,262 Z"
+        android:strokeColor="@color/game_i3_text"
+        android:strokeLineJoin="round"
+        android:strokeWidth="6" />
+
+    <!-- Window -->
+    <path
+        android:fillColor="@color/color_blue"
+        android:pathData="M178,300 H238 V360 H178 Z"
+        android:strokeColor="@color/game_i3_text"
+        android:strokeLineJoin="round"
+        android:strokeWidth="5" />
+
+    <!-- Door -->
+    <path
+        android:fillColor="@color/color_orange"
+        android:pathData="M250,368 H330 V470 H250 Z"
+        android:strokeColor="@color/game_i3_text"
+        android:strokeLineJoin="round"
+        android:strokeWidth="5" />
+
+    <!-- Tree trunk -->
+    <path
+        android:fillColor="@color/color_orange"
+        android:pathData="M672,335 H718 V470 H672 Z"
+        android:strokeColor="@color/game_i3_text"
+        android:strokeWidth="5" />
+
+    <!-- Tree canopy -->
+    <path
+        android:fillColor="@color/color_green"
+        android:pathData="M599,245 A96,96 0 1,1 791,245 A96,96 0 1,1 599,245 Z"
+        android:strokeColor="@color/game_i3_text"
+        android:strokeWidth="6" />
+
+    <!-- Grass -->
+    <path
+        android:fillColor="@color/color_green"
+        android:pathData="M0,455 C180,430 320,418 470,436 C620,454 780,414 1000,432 V574 C1000,596 982,614 960,614 H40 C18,614 0,596 0,574 Z" />
+
+    <!-- Flowers -->
+    <path
+        android:pathData="M512,471 V520"
+        android:strokeColor="@color/game_i3_text"
+        android:strokeLineCap="round"
+        android:strokeWidth="5" />
+    <path
+        android:pathData="M590,489 V534"
+        android:strokeColor="@color/game_i3_text"
+        android:strokeLineCap="round"
+        android:strokeWidth="5" />
+    <path
+        android:pathData="M840,466 V514"
+        android:strokeColor="@color/game_i3_text"
+        android:strokeLineCap="round"
+        android:strokeWidth="5" />
+
+    <path
+        android:fillColor="@color/color_purple"
+        android:pathData="M491,450 A21,21 0 1,1 533,450 A21,21 0 1,1 491,450 Z"
+        android:strokeColor="@color/game_i3_text"
+        android:strokeWidth="4" />
+    <path
+        android:fillColor="@color/color_blue"
+        android:pathData="M569,468 A21,21 0 1,1 611,468 A21,21 0 1,1 569,468 Z"
+        android:strokeColor="@color/game_i3_text"
+        android:strokeWidth="4" />
+    <path
+        android:fillColor="@color/color_red"
+        android:pathData="M819,445 A21,21 0 1,1 861,445 A21,21 0 1,1 819,445 Z"
+        android:strokeColor="@color/game_i3_text"
+        android:strokeWidth="4" />
+
+    <!-- Scene outline -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M40,0 H960 C982,0 1000,18 1000,40 V574 C1000,596 982,614 960,614 H40 C18,614 0,596 0,574 V40 C0,18 18,0 40,0 Z"
+        android:strokeColor="@color/shape_outline"
+        android:strokeWidth="8" />
+</vector>
