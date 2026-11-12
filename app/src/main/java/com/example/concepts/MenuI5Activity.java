@@ -1,8 +1,10 @@
 package com.example.concepts;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
@@ -10,6 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
  * Delegates the opening sound and RETURN action to {@link TransitionSound}.
  */
 public class MenuI5Activity extends AppCompatActivity implements View.OnClickListener {
+
+    private final ActivityResultLauncher<Intent> gameLauncher =
+            TransitionSound.registerMenuLauncher(this);
 
     /**
      * Loads the menu layout and configures the RETURN and activity buttons.
@@ -39,7 +44,7 @@ public class MenuI5Activity extends AppCompatActivity implements View.OnClickLis
         if (id == R.id.btn_activity_1) {
             // TODO: Open activity 1.
         } else if (id == R.id.btn_activity_2) {
-            // TODO: Open activity 2.
+            gameLauncher.launch(new Intent(this, ColoursAndShapesActivity.class));
         }
     }
 
